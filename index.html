@@ -14,20 +14,20 @@
 </head>
 <body>
 
-<!-- Header + Hero -->
+
 <header class="bg-primary text-white text-center p-5">
-  <h1>Firma Mea SRL</h1>
-  <p>Servicii profesionale în București</p>
+  <h1>Nume firma SRL</h1>
+  <p>Servicii de tractare in Baia Mare</p>
   <a href="#contact" class="btn btn-light mt-3">Contactează-ne</a>
 </header>
 
-<!-- Despre firmă -->
+
 <section id="despre" class="container">
   <h2>Despre Noi</h2>
-  <p>Suntem o echipă cu experiență în domeniul [servicii], oferind calitate și profesionalism. Misiunea noastră este să oferim servicii complete și de încredere pentru clienții noștri.</p>
+  <p>Suntem o echipă cu experiență în tractari,Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione culpa provident quam quidem ipsam accusantium fuga ducimus, nobis aliquid laboriosam error ad repellendus explicabo voluptas blanditiis nam facere fugiat non?</p>
 </section>
 
-<!-- Servicii -->
+
 <section id="servicii" class="bg-light">
   <div class="container">
     <h2>Servicii</h2>
@@ -35,43 +35,43 @@
       <div class="col-md-4 mb-4">
         <div class="p-3 border rounded">
           <h3>Serviciu 1</h3>
-          <p>Descriere scurtă a serviciului 1.</p>
+          <p>transport masini x lei</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="p-3 border rounded">
           <h3>Serviciu 2</h3>
-          <p>Descriere scurtă a serviciului 2.</p>
+          <p>transport tractor y lei</p>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="p-3 border rounded">
           <h3>Serviciu 3</h3>
-          <p>Descriere scurtă a serviciului 3.</p>
+          <p>transport bicicleta z lei</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Contact + hartă -->
+
 <section id="contact" class="container text-center">
   <h2>Contact</h2>
   <p>Telefon: <a href="tel:+40123456789">+40 123 456 789</a></p>
-  <p>Email: <a href="mailto:contact@firma-mea.ro">contact@firma-mea.ro</a></p>
-  <p>Adresă: Str. Exemplu 1, București</p>
+  <p>Email: <a href="mailto:firma@gmail.com">firma@gmail.com</a></p>
+  <p>Adresă: Bld Ind, nr 3A,Baia Mare</p>
   <div class="mt-4">
-    <!-- Google Maps iframe complet -->
+   
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.123456789012!2d26.123456!3d44.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1abcd1234abcd%3A0x1234abcd5678abcd!2sStrada%20Exemplu%201%2C%20Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1693945678901!5m2!1sro!2sro" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
 </section>
 
-<!-- Footer cu date legale -->
+
 <footer class="bg-dark text-white text-center p-3">
-  <p>Firma Mea SRL | CUI: 12345678 | Str. Exemplu 1, București | © 2025</p>
+  <p>Firma Mea SRL | CUI: 12345678 | Bld Ind, nr 3A,Baia Mare | © 2025</p>
 </footer>
 
-<!-- Banner GDPR -->
+
 <div id="cookie-banner">
   Folosim cookie-uri pentru a îmbunătăți experiența vizitatorilor. 
   <a href="#politica-cookie" style="color:#FFD700;text-decoration:underline;">Află mai multe</a>
@@ -82,27 +82,27 @@
 function acceptCookies() {
   document.getElementById('cookie-banner').style.display = 'none';
   localStorage.setItem('cookiesAccepted', 'true');
-  initAnalytics(); // initializează GA după accept
+  initAnalytics();
 }
 window.onload = function() {
   if(localStorage.getItem('cookiesAccepted')) {
     document.getElementById('cookie-banner').style.display = 'none';
-    initAnalytics(); // initializează GA dacă cookie acceptate anterior
+    initAnalytics(); 
   }
 }
 
-// Google Analytics - doar dacă vizitatorul acceptă cookie-uri
+
 function initAnalytics() {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX'); // Înlocuiește cu propriul tău ID GA4
+  gtag('config', 'G-XXXXXXXXXX');
 }
 </script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<!--aici se pune idul primit de la google analyitics-->
 
-<!-- Politica Cookie -->
 <section id="politica-cookie" style="padding:50px;background:#f5f5f5;">
   <h2>Politica Cookie</h2>
   <p>Site-ul folosește cookie-uri pentru statistici și optimizare. Datele colectate nu includ informații personale sensibile și sunt folosite doar pentru analiză. Prin utilizarea site-ului, ești de acord cu folosirea cookie-urilor după ce apeși "Accept".</p>
