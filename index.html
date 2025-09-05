@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firma Mea SRL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { scroll-behavior: smooth; }
+    section { padding: 80px 0; }
+    #cookie-banner { position:fixed; bottom:0; width:100%; background:#333; color:white; padding:15px; text-align:center; z-index:1000; }
+    #cookie-banner button { margin-left:15px; padding:5px 10px; background:#FFD700; color:#333; border:none; cursor:pointer; }
+  </style>
+</head>
+<body>
+
+<!-- Header + Hero -->
+<header class="bg-primary text-white text-center p-5">
+  <h1>Firma Mea SRL</h1>
+  <p>Servicii profesionale în București</p>
+  <a href="#contact" class="btn btn-light mt-3">Contactează-ne</a>
+</header>
+
+<!-- Despre firmă -->
+<section id="despre" class="container">
+  <h2>Despre Noi</h2>
+  <p>Suntem o echipă cu experiență în domeniul [servicii], oferind calitate și profesionalism. Misiunea noastră este să oferim servicii complete și de încredere pentru clienții noștri.</p>
+</section>
+
+<!-- Servicii -->
+<section id="servicii" class="bg-light">
+  <div class="container">
+    <h2>Servicii</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="p-3 border rounded">
+          <h3>Serviciu 1</h3>
+          <p>Descriere scurtă a serviciului 1.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="p-3 border rounded">
+          <h3>Serviciu 2</h3>
+          <p>Descriere scurtă a serviciului 2.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="p-3 border rounded">
+          <h3>Serviciu 3</h3>
+          <p>Descriere scurtă a serviciului 3.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact + hartă -->
+<section id="contact" class="container text-center">
+  <h2>Contact</h2>
+  <p>Telefon: <a href="tel:+40123456789">+40 123 456 789</a></p>
+  <p>Email: <a href="mailto:contact@firma-mea.ro">contact@firma-mea.ro</a></p>
+  <p>Adresă: Str. Exemplu 1, București</p>
+  <div class="mt-4">
+    <!-- Google Maps iframe complet -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.123456789012!2d26.123456!3d44.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1abcd1234abcd%3A0x1234abcd5678abcd!2sStrada%20Exemplu%201%2C%20Bucure%C8%99ti!5e0!3m2!1sro!2sro!4v1693945678901!5m2!1sro!2sro" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- Footer cu date legale -->
+<footer class="bg-dark text-white text-center p-3">
+  <p>Firma Mea SRL | CUI: 12345678 | Str. Exemplu 1, București | © 2025</p>
+</footer>
+
+<!-- Banner GDPR -->
+<div id="cookie-banner">
+  Folosim cookie-uri pentru a îmbunătăți experiența vizitatorilor. 
+  <a href="#politica-cookie" style="color:#FFD700;text-decoration:underline;">Află mai multe</a>
+  <button onclick="acceptCookies()">Accept</button>
+</div>
+
+<script>
+function acceptCookies() {
+  document.getElementById('cookie-banner').style.display = 'none';
+  localStorage.setItem('cookiesAccepted', 'true');
+  initAnalytics(); // initializează GA după accept
+}
+window.onload = function() {
+  if(localStorage.getItem('cookiesAccepted')) {
+    document.getElementById('cookie-banner').style.display = 'none';
+    initAnalytics(); // initializează GA dacă cookie acceptate anterior
+  }
+}
+
+// Google Analytics - doar dacă vizitatorul acceptă cookie-uri
+function initAnalytics() {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX'); // Înlocuiește cu propriul tău ID GA4
+}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+<!-- Politica Cookie -->
+<section id="politica-cookie" style="padding:50px;background:#f5f5f5;">
+  <h2>Politica Cookie</h2>
+  <p>Site-ul folosește cookie-uri pentru statistici și optimizare. Datele colectate nu includ informații personale sensibile și sunt folosite doar pentru analiză. Prin utilizarea site-ului, ești de acord cu folosirea cookie-urilor după ce apeși "Accept".</p>
+</section>
+
+</body>
+</html>
